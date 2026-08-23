@@ -14,7 +14,7 @@ import AudioManager from "./components/AudioManager";
 
 function App() {
   return (
-    <BrowserRouter>
+   <BrowserRouter basename="/haunted-murder-mystery">
 
       {/* Horror Sound Button */}
       <AudioManager />
