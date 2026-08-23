@@ -1,0 +1,146 @@
+.ghost-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  background:
+    rgba(0, 0, 0, 0.94);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  animation:
+    horrorFlash 0.4s;
+}
+
+.ghost-shadow {
+  font-size: 180px;
+
+  filter:
+    grayscale(1)
+    drop-shadow(
+      0 0 35px white
+    );
+
+  animation:
+    ghostMove 2s infinite;
+}
+
+.ghost-warning {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.ghost-warning h2 {
+  color: #d00000;
+
+  letter-spacing: 5px;
+
+  font-size: 25px;
+
+  text-shadow:
+    0 0 15px red;
+}
+
+.ghost-warning p {
+  color: #aaa;
+
+  font-size: 18px;
+
+  font-style: italic;
+}
+
+.ghost-warning button {
+  margin-top: 20px;
+
+  padding: 12px 30px;
+
+  background: transparent;
+
+  border: 1px solid #777;
+
+  color: white;
+
+  cursor: pointer;
+
+  letter-spacing: 2px;
+}
+
+.ghost-warning button:hover {
+  background: #700000;
+
+  border-color: red;
+
+  box-shadow:
+    0 0 20px red;
+}
+
+@keyframes ghostMove {
+
+  0% {
+    opacity: 0.4;
+
+    transform:
+      translateY(10px)
+      scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      translateY(-10px)
+      scale(1.05);
+  }
+
+  100% {
+    opacity: 0.4;
+
+    transform:
+      translateY(10px)
+      scale(0.95);
+  }
+
+}
+
+@keyframes horrorFlash {
+
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .ghost-shadow {
+    font-size: 110px;
+  }
+
+  .ghost-warning h2 {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
+
+}

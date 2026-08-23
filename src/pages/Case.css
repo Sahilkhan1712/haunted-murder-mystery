@@ -1,0 +1,145 @@
+.case-page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2000&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  padding: 40px 20px;
+}
+
+.case-content {
+  width: 850px;
+  max-width: 95%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.case-number {
+  color: #b30000;
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.case-content h1 {
+  font-size: 65px;
+  letter-spacing: 8px;
+  margin: 0;
+  text-shadow: 0 0 20px #ff0000;
+}
+
+.blood-line {
+  width: 180px;
+  height: 3px;
+  background: #9b0000;
+  margin: 25px auto;
+  box-shadow: 0 0 15px red;
+}
+
+.case-content h2 {
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+  color: #ddd;
+}
+
+.case-story {
+  color: #bdbdbd;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 750px;
+}
+
+.warning-box {
+  border: 1px solid #6d0000;
+  background: rgba(80, 0, 0, 0.25);
+  padding: 20px;
+  margin: 35px auto;
+  max-width: 650px;
+}
+
+.warning-box p {
+  color: #ff2222;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.warning-box span {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.investigate-btn {
+  display: block;
+  margin: 25px auto 15px;
+
+  padding: 15px 35px;
+
+  background: #8b0000;
+  border: 2px solid #b30000;
+
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.investigate-btn:hover {
+  background: #d00000;
+  box-shadow: 0 0 25px red;
+  transform: scale(1.05);
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  .case-content h1 {
+    font-size: 38px;
+    letter-spacing: 4px;
+  }
+
+  .case-content h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .case-story {
+    font-size: 15px;
+  }
+
+  .investigate-btn {
+    width: 90%;
+  }
+}

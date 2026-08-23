@@ -1,0 +1,201 @@
+.evidence-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top,
+      #250000,
+      #080808 45%,
+      #000
+    );
+
+  color: white;
+  padding: 60px 20px;
+}
+
+.evidence-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.evidence-label {
+  color: #d00000;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.evidence-container h1 {
+  font-size: 55px;
+  letter-spacing: 8px;
+  margin: 10px 0;
+  text-shadow: 0 0 20px red;
+}
+
+.evidence-subtitle {
+  color: #888;
+  margin-bottom: 45px;
+}
+
+.evidence-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.evidence-card {
+  display: flex;
+  align-items: flex-start;
+
+  text-align: left;
+
+  padding: 25px;
+
+  background: rgba(20, 20, 20, 0.9);
+
+  border: 1px solid #333;
+
+  transition: 0.3s;
+}
+
+.evidence-card:hover {
+  border-color: #8b0000;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 0, 0.2);
+}
+
+.evidence-icon {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.evidence-info h2 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+
+  color: #ddd;
+}
+
+.evidence-info span {
+  color: #a00000;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+.evidence-info p {
+  color: #999;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+
+  margin-top: 12px;
+}
+
+.important-clue {
+  margin: 45px auto 30px;
+
+  max-width: 700px;
+
+  padding: 25px;
+
+  border: 1px solid #700000;
+
+  background: rgba(80, 0, 0, 0.2);
+}
+
+.important-clue h2 {
+  color: #d00000;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+}
+
+.important-clue p {
+  color: #aaa;
+
+  line-height: 1.6;
+}
+
+.important-clue strong {
+  display: block;
+
+  color: white;
+
+  font-size: 25px;
+
+  margin: 15px;
+
+  letter-spacing: 4px;
+
+  text-shadow: 0 0 15px red;
+}
+
+.suspect-btn {
+  padding: 15px 35px;
+
+  background: #8b0000;
+
+  border: 1px solid #d00000;
+
+  color: white;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.suspect-btn:hover {
+  background: #d00000;
+
+  box-shadow: 0 0 25px red;
+}
+
+.back-btn {
+  display: block;
+
+  margin: 20px auto;
+
+  background: transparent;
+
+  border: none;
+
+  color: #666;
+
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  .evidence-container h1 {
+    font-size: 35px;
+    letter-spacing: 4px;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-card {
+    padding: 20px;
+  }
+
+}

@@ -1,0 +1,429 @@
+.crime-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at center, #260000 0%, #080000 50%, #000 100%);
+
+  color: white;
+  padding: 35px 20px;
+}
+
+/* DARK OVERLAY */
+.crime-overlay {
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 15%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* HEADER */
+.crime-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.crime-header p {
+  color: #ff3030;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.crime-header h1 {
+  font-size: clamp(35px, 6vw, 65px);
+  margin: 5px 0;
+
+  text-shadow:
+    0 0 15px red,
+    0 0 35px rgba(255, 0, 0, 0.7);
+}
+
+.crime-header span {
+  color: #999;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+/* CRIME ROOM */
+.crime-room {
+  position: relative;
+
+  max-width: 1000px;
+  height: 430px;
+
+  margin: auto;
+
+  border: 2px solid #3d0000;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(30, 0, 0, 0.8)
+    );
+
+  box-shadow:
+    inset 0 0 80px rgba(255, 0, 0, 0.12),
+    0 0 30px rgba(0, 0, 0, 0.9);
+
+  overflow: hidden;
+}
+
+/* VICTIM */
+.victim {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.victim-body {
+  width: 100px;
+  height: 180px;
+
+  background: #111;
+
+  border-radius: 50% 50% 20% 20%;
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.victim-label {
+  margin-top: 10px;
+
+  color: #ff2222;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* EVIDENCE BUTTONS */
+.evidence {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ff2222;
+
+  background: rgba(10, 0, 0, 0.9);
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(255, 0, 0, 0.5);
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    opacity 0.3s;
+}
+
+.evidence:hover {
+  transform: scale(1.2);
+
+  box-shadow:
+    0 0 15px red,
+    0 0 35px red;
+}
+
+/* POSITIONS */
+
+.evidence-knife {
+  left: 15%;
+  top: 60%;
+}
+
+.evidence-footprints {
+  left: 28%;
+  bottom: 10%;
+}
+
+.evidence-note {
+  right: 18%;
+  top: 25%;
+}
+
+.evidence-watch {
+  right: 30%;
+  bottom: 12%;
+}
+
+/* FOUND */
+.evidence.found {
+  opacity: 0.45;
+
+  border-color: #777;
+
+  box-shadow: none;
+
+  transform: scale(0.9);
+}
+
+/* INVESTIGATION PANEL */
+.investigation-panel {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 850px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+
+  padding: 25px;
+
+  border: 1px solid #4d0000;
+
+  background: rgba(5, 0, 0, 0.85);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 0, 0.12);
+}
+
+.investigation-panel h2 {
+  color: #ff3030;
+
+  text-shadow: 0 0 10px red;
+}
+
+.investigation-panel p {
+  color: #bbb;
+}
+
+/* COUNTER */
+.evidence-counter {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 10px 20px;
+
+  border: 1px solid #ff2222;
+
+  color: #ff4444;
+
+  border-radius: 5px;
+
+  font-weight: bold;
+}
+
+/* MESSAGE */
+.evidence-message {
+  margin: 20px auto;
+
+  padding: 12px;
+
+  color: #ff4444;
+
+  background: rgba(100, 0, 0, 0.2);
+
+  border-left: 3px solid red;
+
+  animation: messageIn 0.4s ease;
+}
+
+/* CONTINUE */
+.continue-btn {
+  margin-top: 15px;
+
+  padding: 14px 30px;
+
+  background: #8b0000;
+
+  color: white;
+
+  border: 2px solid #ff2222;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.continue-btn:hover {
+  background: #d00000;
+
+  box-shadow:
+    0 0 15px red,
+    0 0 30px red;
+
+  transform: scale(1.05);
+}
+
+/* GHOST EVENT */
+.ghost-event {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  animation: ghostAppear 0.5s ease;
+}
+
+.ghost {
+  font-size: 100px;
+
+  animation:
+    ghostFloat 1.5s infinite,
+    ghostGlow 1s infinite alternate;
+}
+
+.ghost-message h2 {
+  color: #ff2222;
+
+  font-size: 35px;
+
+  text-shadow:
+    0 0 15px red,
+    0 0 35px red;
+}
+
+.ghost-message p {
+  color: #ddd;
+
+  font-size: 22px;
+}
+
+.ghost-event button {
+  margin-top: 25px;
+
+  padding: 14px 28px;
+
+  background: #090000;
+
+  color: #ff3333;
+
+  border: 2px solid red;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.ghost-event button:hover {
+  background: #8b0000;
+
+  color: white;
+
+  box-shadow: 0 0 25px red;
+}
+
+/* ANIMATIONS */
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ghostAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ghostFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes ghostGlow {
+  from {
+    filter: drop-shadow(0 0 5px red);
+  }
+
+  to {
+    filter: drop-shadow(0 0 30px red);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .crime-page {
+    padding: 20px 10px;
+  }
+
+  .crime-room {
+    height: 350px;
+  }
+
+  .evidence {
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+  }
+
+  .victim-body {
+    width: 70px;
+    height: 130px;
+  }
+
+  .crime-header h1 {
+    font-size: 35px;
+  }
+
+  .ghost {
+    font-size: 75px;
+  }
+
+  .ghost-message h2 {
+    font-size: 24px;
+  }
+}
