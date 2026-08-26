@@ -8,7 +8,7 @@ function AudioManager() {
     try {
       if (!audioRef.current) {
         audioRef.current = new Audio(
-          "/sounds/horror-background%20copy.mp3"
+          `${import.meta.env.BASE_URL}sounds/horror-background%20copy.mp3`
         );
 
         audioRef.current.loop = true;
@@ -50,7 +50,7 @@ function AudioManager() {
         cursor: "pointer",
         fontSize: "15px",
         fontWeight: "bold",
-        boxShadow: "0 0 25px rgba(255,0,0,0.6)"
+        boxShadow: "0 0 25px rgba(255,0,0,0.6)",
       }}
     >
       {playing ? "🔊 HORROR ON" : "🔇 HORROR OFF"}
